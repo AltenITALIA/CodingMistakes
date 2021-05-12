@@ -19,10 +19,10 @@ namespace CodingMistakes.WebApi.Controllers
         /// Search for TODO comments about "DATE ONLY PROPERTY" to see how to add it.
         /// </summary>
         [HttpPost]
-        [ProducesResponseType(typeof(DateInformation), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(DateOnlyInformation), StatusCodes.Status200OK)]
         public IActionResult Post(DateOnlyEventRequest request)
         {
-            var dateInformation = new DateInformation
+            var dateInformation = new DateOnlyInformation
             {
                 Date = request.Date,
                 TimeZone = TimeZoneInfo.Local.Id
