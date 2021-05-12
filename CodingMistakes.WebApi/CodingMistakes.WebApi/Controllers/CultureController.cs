@@ -35,7 +35,7 @@ namespace CodingMistakes.WebApi.Controllers
         /// This endpoint shows how the server parses a number that is contained in a string property without specifying a culture. In this case, the culture of the server is used.
         /// Try to use "." or "," as decimal separator as see the result.
         /// </summary>
-        [HttpPost("parseerror")]
+        [HttpPost("ParseError")]
         [ProducesResponseType(typeof(CultureSampleResult), StatusCodes.Status200OK)]
         public IActionResult ParseError(CultureRequest request)
         {
@@ -53,7 +53,7 @@ namespace CodingMistakes.WebApi.Controllers
         /// no matter the culture of the server.
         /// You can use both "." or "," as decimal separator.
         /// </summary>
-        [HttpPost("parseok")]
+        [HttpPost("ParseOk")]
         [ProducesResponseType(typeof(CultureSampleResult), StatusCodes.Status200OK)]
         public IActionResult ParseOK(CultureRequest request)
         {
