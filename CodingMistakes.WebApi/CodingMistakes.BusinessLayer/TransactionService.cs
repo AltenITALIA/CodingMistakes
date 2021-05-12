@@ -40,5 +40,11 @@ namespace CodingMistakes.BusinessLayer
             var transactions = (await dataContext.Transactions.Include(t => t.Product).ToListAsync()).Where(t => t.ProductId == productId);
             return transactions;
         }
+
+        public async void LoadAll()
+        {
+            // HACK: This methods is incorrectly declared as async void, so is it impossible to await it.
+            var transactions = await dataContext.Transactions.Include(t => t.Product).ToListAsync();
+        }
     }
 }
