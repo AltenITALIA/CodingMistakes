@@ -11,5 +11,7 @@ namespace CodingMistakes.BusinessLayer
         Task<IEnumerable<TransactionItem>> GetByProductIdAsync(int productId);
 
         Task<IEnumerable<TransactionItem>> InMemoryGetByProductIdAsync(int productId);
+
+        void LoadAll();
     }
 }

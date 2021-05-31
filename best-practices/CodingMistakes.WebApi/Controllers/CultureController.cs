@@ -30,5 +30,41 @@ namespace CodingMistakes.WebApi.Controllers
 
             return Ok(cultureResult);
         }
+
+        /// <summary>
+        /// This endpoint shows how the server parses a number that is contained in a string property without specifying a culture. In this case, the culture of the server is used.
+        /// Try to use "." or "," as decimal separator as see the result.
+        /// </summary>
+        [HttpPost("ParseError")]
+        [ProducesResponseType(typeof(CultureSampleResult), StatusCodes.Status200OK)]
+        public IActionResult ParseError(CultureRequest request)
+        {
+            var cultureResult = new CultureSampleResult
+            {
+                CultureName = CultureInfo.CurrentUICulture.Name,
+                Value = double.Parse(request.Number)
+            };
+
+            return Ok(cultureResult);
+        }
+
+        /// <summary>
+        /// This endpoint shows how the correctly parse a number that is contained in a string property using the Invariant Culture, so each decimal separator is accepted,
+        /// no matter the culture of the server.
+        /// You can use both "." or "," as decimal separator.
+        /// </summary>
+        [HttpPost("ParseOk")]
+        [ProducesResponseType(typeof(CultureSampleResult), StatusCodes.Status200OK)]
+        public IActionResult ParseOK(CultureRequest request)
+        {
+            var cultureResult = new CultureSampleResult
+            {
+                CultureName = CultureInfo.CurrentUICulture.Name,
+                // HACK: this parse method tipically should be placed in an extension method.
+                Value = double.Parse(request.Number.Replace(",", "."), CultureInfo.InvariantCulture)
+            };
+
+            return Ok(cultureResult);
+        }
     }
 }
