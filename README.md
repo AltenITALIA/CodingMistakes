@@ -1,4 +1,20 @@
-# .NET Coding Mistakess
-A collection of .NET Code samples that shows how to deal with some common problems and how to solve them.
+[Alten Italia SPA](www.alten.it) - [Linkedin](https://www.linkedin.com/company/altenitalia/jobs/) presents:
+# Commond Coding Mistakes and Best Practices
+Commond Coding Mistakes and Best Practices in the real, .Net, world. ❤
+
+     ▄▄·       ·▄▄▄▄  ▪   ▐ ▄  ▄▄ •     • ▌ ▄ ·. ▪  .▄▄ · ▄▄▄▄▄ ▄▄▄· ▄ •▄ ▄▄▄ ..▄▄ · 
+    ▐█ ▌▪▪     ██▪ ██ ██ •█▌▐█▐█ ▀ ▪    ·██ ▐███▪██ ▐█ ▀. •██  ▐█ ▀█ █▌▄▌▪▀▄.▀·▐█ ▀. 
+    ██ ▄▄ ▄█▀▄ ▐█· ▐█▌▐█·▐█▐▐▌▄█ ▀█▄    ▐█ ▌▐▌▐█·▐█·▄▀▀▀█▄ ▐█.▪▄█▀▀█ ▐▀▀▄·▐▀▀▪▄▄▀▀▀█▄
+    ▐███▌▐█▌.▐▌██. ██ ▐█▌██▐█▌▐█▄▪▐█    ██ ██▌▐█▌▐█▌▐█▄▪▐█ ▐█▌·▐█ ▪▐▌▐█.█▌▐█▄▄▌▐█▄▪▐█
+    ·▀▀▀  ▀█▄▀▪▀▀▀▀▀• ▀▀▀▀▀ █▪·▀▀▀▀     ▀▀  █▪▀▀▀▀▀▀ ▀▀▀▀  ▀▀▀  ▀  ▀ ·▀  ▀ ▀▀▀  ▀▀▀▀ 
+
+By [Alessandro Monno](https://github.com/aletfa)
+
+
+    ▄▄▄▄· ▄▄▄ ..▄▄ · ▄▄▄▄▄     ▄▄▄·▄▄▄   ▄▄▄·  ▄▄· ▄▄▄▄▄▪   ▄▄· ▄▄▄ ..▄▄ · 
+    ▐█ ▀█▪▀▄.▀·▐█ ▀. •██      ▐█ ▄█▀▄ █·▐█ ▀█ ▐█ ▌▪•██  ██ ▐█ ▌▪▀▄.▀·▐█ ▀. 
+    ▐█▀▀█▄▐▀▀▪▄▄▀▀▀█▄ ▐█.▪     ██▀·▐▀▀▄ ▄█▀▀█ ██ ▄▄ ▐█.▪▐█·██ ▄▄▐▀▀▪▄▄▀▀▀█▄
+    ██▄▪▐█▐█▄▄▌▐█▄▪▐█ ▐█▌·    ▐█▪·•▐█•█▌▐█ ▪▐▌▐███▌ ▐█▌·▐█▌▐███▌▐█▄▄▌▐█▄▪▐█
+    ·▀▀▀▀  ▀▀▀  ▀▀▀▀  ▀▀▀     .▀   .▀  ▀ ▀  ▀ ·▀▀▀  ▀▀▀ ▀▀▀·▀▀▀  ▀▀▀  ▀▀▀▀ 
 
 By [Marco Minerva](https://github.com/marcominerva!) - Microsoft MVP
