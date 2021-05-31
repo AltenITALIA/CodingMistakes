@@ -1,6 +1,6 @@
 [Alten Italia SPA](www.alten.it) - [Linkedin](https://www.linkedin.com/company/altenitalia/jobs/) presents:
-# Commond Coding Mistakes and Best Practices
-Commond Coding Mistakes and Best Practices in the real, .Net, world. ❤
+# Common Coding Mistakes and Best Practices
+Common Coding Mistakes and Best Practices in the real, .Net like, world. ❤
 
      ▄▄·       ·▄▄▄▄  ▪   ▐ ▄  ▄▄ •     • ▌ ▄ ·. ▪  .▄▄ · ▄▄▄▄▄ ▄▄▄· ▄ •▄ ▄▄▄ ..▄▄ · 
     ▐█ ▌▪▪     ██▪ ██ ██ •█▌▐█▐█ ▀ ▪    ·██ ▐███▪██ ▐█ ▀. •██  ▐█ ▀█ █▌▄▌▪▀▄.▀·▐█ ▀. 
