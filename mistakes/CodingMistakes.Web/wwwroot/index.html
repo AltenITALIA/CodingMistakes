@@ -1,0 +1,199 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        :root {
+            --cm-primary-color: #E91E63;
+            --cm-dark-primary-color: #C2185B;
+            --cm-text-color: #212121;
+            --cm-accent-color: #03A9F4;
+        }
+
+        html {
+            line-height: unset;
+            color: var(--cm-text-color);
+        }
+
+        body {
+            margin: 30px 20px;
+            margin-top: 10px;
+        }
+
+        a:not(.btn), a:not(.btn):visited {
+            color: var(--cm-primary-color);
+        }
+
+            a:not(.btn):hover {
+                color: var(--cm-dark-primary-color);
+            }
+
+        .material-icons {
+            font-size: 16px;
+            margin-right: 5px;
+        }
+
+        .flexy {
+            display: flex;
+            align-items: center;
+            white-space: pre-wrap;
+        }
+
+        .caps {
+            text-transform: uppercase;
+        }
+
+        .spacer {
+            margin-right: 5px;
+        }
+
+        .emphasis {
+            color: black;
+        }
+
+        label {
+            font-size: unset;
+            color: var(--cm-dark-primary-color);
+            font-family: monospace;
+        }
+
+        .code {
+            font-family: monospace;
+        }
+
+        section {
+            margin-top: 30px;
+        }
+
+            section .title {
+                font-size: 20px;
+            }
+
+            section .content {
+                border-left: 1px solid gainsboro;
+                padding: 0 15px;
+                margin: 5px;
+                margin-left: 2px;
+            }
+
+            section .badge {
+                margin-left: unset;
+                margin-right: 5px;
+                text-transform: uppercase;
+                font-family: monospace;
+            }
+            section .badge.good {
+                background-color: var(--cm-accent-color);
+                color: white;
+            }
+            section .badge.bad {
+                background-color: var(--cm-primary-color);
+                color: white;
+            }
+            pre:not(.title) {
+                display: inline;
+                background-color: gainsboro;
+                color: black;
+                padding: 1px 2px;
+            }
+    </style>
+</head>
+<body>
+    <div class="caps">
+        Alten Italia presenta:
+    </div>
+    <pre class="title emphasis" style="margin: 0; margin-bottom: -5px">
+ ▄▄·       ·▄▄▄▄  ▪   ▄▄ • ▪   ▐ ▄  ▄▄ •     • ▌ ▄ ·. ▪  .▄▄ · ▄▄▄▄▄ ▄▄▄· ▄ •▄ ▄▄▄ ..▄▄ · 
+▐█ ▌▪▪     ██▪ ██ ██ ▐█ ▀ ▪██ •█▌▐█▐█ ▀ ▪    ·██ ▐███▪██ ▐█ ▀. •██  ▐█ ▀█ █▌▄▌▪▀▄.▀·▐█ ▀. 
+██ ▄▄ ▄█▀▄ ▐█· ▐█▌▐█·▄█ ▀█▄▐█·▐█▐▐▌▄█ ▀█▄    ▐█ ▌▐▌▐█·▐█·▄▀▀▀█▄ ▐█.▪▄█▀▀█ ▐▀▀▄·▐▀▀▪▄▄▀▀▀█▄
+▐███▌▐█▌.▐▌██. ██ ▐█▌▐█▄▪▐█▐█▌██▐█▌▐█▄▪▐█    ██ ██▌▐█▌▐█▌▐█▄▪▐█ ▐█▌·▐█ ▪▐▌▐█.█▌▐█▄▄▌▐█▄▪▐█
+·▀▀▀  ▀█▄▀▪▀▀▀▀▀• ▀▀▀·▀▀▀▀ ▀▀▀▀▀ █▪·▀▀▀▀     ▀▀  █▪▀▀▀▀▀▀ ▀▀▀▀  ▀▀▀  ▀  ▀ ·▀  ▀ ▀▀▀  ▀▀▀▀ 
+            </pre>
+    <div class="flexy caps">
+        <span class="material-icons">public</span><a href="https://www.alten.it/it/" target="_blank">www.alten.it</a><span> </span>
+        <span class="material-icons">work</span><a href="https://www.linkedin.com/company/altenitalia/jobs/">Linkedin</a>
+    </div>
+
+    <section class="tutorial">
+        <div>Le API del servizio sono disponibili via <a href="./swagger" target="server-swagger">/swagger</a></div>
+        <div style="margin: 10px 0">
+            Configuration:
+            <div style="margin: 10px 20px">
+                <div><label>Time</label>: <span class="code" id="z-time">??</span></div>
+                <div><label>Culture</label>: <span class="code" id="z-culture">??</span></div>
+                <div><label>Numbers</label>: <span class="code" id="z-numbers">??</span></div>
+                <div><label>Date</label>: <span class="code" id="z-dates">??</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flexy"><span class="badge good">example</span><span class="title caps">Get server date</span></div>
+        <div class="description">
+            Semplicemente chiediamo al server che giorno è oggi,<br />
+            dunque formattiamo con una funzione artigianale che ci restituisce: MM/dd/yyyy.<br />
+            <strong>Tutto funziona perchè il server ci risponde con il suo TimeZone.</strong>
+        </div>
+        <div class="content">
+            <a style="margin-top:10px" class="waves-effect waves-light btn" href="javascript:getServerDate()"><i class="material-icons right">send</i>Request</a>
+            <div style="margin-top: 10px">
+                <label>Risposta</label>: <span class="code" style="font-size: 16px" id="date-get">??</span><br />
+                <label>Dunque</label>:
+                <span class="code" style="font-size: 16px">
+                    <span id="date-get-print">??</span>
+                    <span style="display: none; color: red;" id="date-get-print-error"></span>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flexy"><span class="badge bad">example</span><span class="title caps">Bad date parse</span></div>
+        <div class="description">
+            Nell'esempio proposto inviamo una data al server.<br />
+            Quando una data viene inviata al server viene convertita in JSON, <strong>a questo punto viene convertita in UTC.</strong><br />
+            Stampiamo utilizzando una funzione artigianale: MM/dd/yyyy.<br />
+        </div>
+        <div class="content">
+            <input type="text" class="datepicker" id="ex-1-datepicker" style="width: 200px"> <a style="margin-top:10px" class="waves-effect waves-light btn" href="javascript:dateParseBad()"><i class="material-icons right">send</i>Submit</a>
+            <div style="margin-top: 10px">
+                <label>JSON</label>: <span class="code" style="font-size: 16px" id="date-parse-bad-sent">??</span><br />
+                <label>Risposta</label>: <span class="code" style="font-size: 16px" id="date-parse-bad">??</span><br />
+                <label>Dunque</label>:
+                <span class="code" style="font-size: 16px">
+                    <span id="date-parse-bad-print">??</span>
+                    <span style="display: none; color: red;" id="date-parse-bad-print-error"></span>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flexy"><span class="badge bad">example</span><span class="title caps">Currency</span></div>
+        <div class="description">
+            Giochiamo un po' con i numeri.<br />
+            Nella casella qui sotto proviamo a scrivere <pre>1000</pre>, <pre>10,000</pre> e <pre>10.000</pre><br />
+            Vediamo cosa ci dice il server di aver capito<br />
+        </div>
+        <div class="content">
+            <input type="number" value="10.000" min="10000" step="1" id="ex-3-numeric" style="width: 200px">
+            <a style="margin-top:10px" class="waves-effect waves-light btn" href="javascript:numberParseBad()"><i class="material-icons right">send</i>Submit</a>
+            <div style="margin-top: 10px">
+                <label>Invio</label>: <span class="code" style="font-size: 16px" id="number-parse-bad-sent">??</span><br />
+                <label>Risposta</label>: <span class="code" style="font-size: 16px" id="number-parse-bad">??</span><br />
+                <label>Controllo</label>: <span class="code" style="font-size: 16px" id="number-parse-bad-check">??</span><br />
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./examples.js"></script>
+    <script>
+        $(document).ready(function () {
+            refreshZones();
+            M.AutoInit();
+        });
+    </script>
+</body>
+</html>

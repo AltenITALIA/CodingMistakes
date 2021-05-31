@@ -1,0 +1,18 @@
+﻿<Window x:Class="CodingMistakes.Memory.DeadWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CodingMistakes.Memory"
+        mc:Ignorable="d"
+        Title="DeadWindow" Height="501" Width="450">
+    <Grid >
+        <Image x:Name="imgDeath" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Image.Source>
+                <BitmapImage UriSource="pack://siteoforigin:,,,/death.png"/>
+            </Image.Source>
+        </Image>
+        <Button Margin="0,84,0,0" x:Name="btnCrossThread" Click="btnCrossThread_Click" Height="30" Width="100" Content="Cross Thread" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <Button Margin="169,345,169,56" x:Name="btnGood" Click="btnGood_Click" Height="30" Width="100" Content="Good" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Grid>
+</Window>

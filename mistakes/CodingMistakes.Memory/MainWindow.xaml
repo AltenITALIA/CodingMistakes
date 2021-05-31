@@ -1,0 +1,46 @@
+﻿<Window x:Class="CodingMistakes.Memory.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CodingMistakes.Memory"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Image x:Name="imgCM" Stretch="None">
+                <Image.Source>
+                    <BitmapImage UriSource="pack://siteoforigin:,,,/codingmistakes.png"/>
+                </Image.Source>
+            </Image>
+            <StackPanel Margin="30 10" Grid.Row="1">
+                <StackPanel>
+                    <Label FontSize="16">Cross Thread</Label>
+                    <Label Margin="0 -5 0 0">Cerchiamo di accedere all'interfaccia grafica da un thread separato.</Label>
+                    <Button x:Name="btnCrossThread" Margin="20 0 0 10" Click="btnCrossThread_Click">Start demo</Button>
+                </StackPanel>
+
+                <StackPanel Margin="0 20 0 0">
+                    <Label FontSize="16">Memory Leak</Label>
+                    <Label Margin="0 -5 0 0">Scarichiamo un file di grandi dimensioni (100Mb) per raggiungere rapidamente il risultato</Label>
+                    <TextBox Margin="20 0 0 3" Background="Transparent" IsReadOnly="True">
+                        http://ipv4.download.thinkbroadband.com/100MB.zip
+                    </TextBox>
+                    <Button x:Name="btnDirectory" Margin="20 0 0 10" Click="btnDirectory_Click" >Program directory</Button>
+                    <StackPanel Margin="0 10">
+                        <Label Margin="0 -5 0 0">Usiamo il file in modo non sicuro</Label>
+                        <Button x:Name="btnLoad" Margin="20 0 0 10" Click="btnLoad_Click" >Load</Button>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            
+        </Grid>
+    </Grid>
+</Window>
