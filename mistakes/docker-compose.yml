@@ -2,9 +2,9 @@ version: '3.4'
 
 services:
   coding-mistakes-server1:
-   container_name: coding-mistakes-server1
+   container_name: coding-mistakes-web1
    build:
-     context: CodingMistakes.Server
+     context: CodingMistakes.Web
      dockerfile: Dockerfile
    ports:
      - 44080:80
@@ -15,19 +15,6 @@ services:
     ASPNETCORE_ENVIRONMENT: "Development"
     TZ: "America/Los_Angeles"
 
-  coding-mistakes-server2:
-   container_name: coding-mistakes-server2
-   build:
-     context: CodingMistakes.Server
-     dockerfile: Dockerfile
-   ports:
-     - 45080:80
-     - 45443:443
-   depends_on:
-     - coding-mistakes-db 
-   environment:
-    ASPNETCORE_ENVIRONMENT: "Development"
-    TZ: "Europe/Rome"
 
   coding-mistakes-db:
     image: mcr.microsoft.com/mssql/server:2019-latest

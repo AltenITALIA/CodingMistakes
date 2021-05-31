@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodingMistakes.Web", "Codin
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{50739384-4F97-4A90-8FEF-9637173400E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingMistakes.Memory", "CodingMistakes.Memory\CodingMistakes.Memory.csproj", "{4ABF3710-2F61-40CC-AD83-EF068B2B6F4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodingMistakes.Desktop", "CodingMistakes.Desktop\CodingMistakes.Desktop.csproj", "{4ABF3710-2F61-40CC-AD83-EF068B2B6F4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
