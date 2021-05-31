@@ -47,6 +47,19 @@ function numberParseBad() {
     );
 }
 
+function classesCast() {
+    var newOne = new Test();
+    $('#classes-ok').text(newOne.method());
+
+    var casted = {};
+    casted = Object.assign(casted, newOne);
+
+    console.log('instance:', newOne);
+    console.log('casted:', casted);
+
+    $('#classes-bad').text(!!casted.method ? casted.method() : 'undefined');
+}
+
 function formatDateBAD(date) {
     var d = new Date(date),
         month = '' + (d.getMonth() + 1),
@@ -59,4 +72,11 @@ function formatDateBAD(date) {
         day = '0' + day;
 
     return [year, month, day].join('/');
+}
+
+
+class Test {
+    method() {
+        return true;
+    }
 }

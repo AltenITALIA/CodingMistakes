@@ -186,6 +186,23 @@
         </div>
     </section>
 
+    <section>
+        <div class="flexy"><span class="badge bad">example</span><span class="title caps">Cast in Javascript/Typescript</span></div>
+        <div class="description">
+            In Javascript (e dunque Typescript) le classi sono estremamente delicate.<br />
+            Essendo un linguaggio destrutturato è facile inciampare in qualche difficoltà del linguaggio.<br />
+            I cast sono pericolossimi ad esempio in quanto i metodi in Javascript sono trattati come proprietà e di default vangono <strong>undefined</strong>.<br />
+            In Typescript c'è la possibilità di un autentico cast, tuttavia <strong>i metodi non vengono comunque ricopiati</strong>.<br />
+        </div>
+        <div class="content">
+            <a style="margin-top:10px" class="waves-effect waves-light btn" href="javascript:classesCast()"><i class="material-icons right">send</i>Test</a>
+            <div style="margin-top: 10px">
+                <label>Nuova classe</label>: <pre>istanza.method()</pre> = <span class="code" style="font-size: 16px" id="classes-ok">??</span><br />
+                <label>Cast</label>: <pre>istanza.method()</pre> = <span class="code" style="font-size: 16px" id="classes-bad">??</span><br />
+            </div>
+        </div>
+    </section>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./examples.js"></script>
